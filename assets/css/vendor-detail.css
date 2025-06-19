@@ -1,0 +1,222 @@
+/* Reset & Base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: sans-serif;
+  background-color: #f8f8f8;
+  color: #333;
+  max-width: 480px;
+  margin: 0 auto;
+  padding-bottom: 80px;
+}
+
+/* Vendor Banner */
+.vendor-banner img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+/* Vendor Info */
+.vendor-info {
+  padding: 16px;
+  background: #fff;
+  border-bottom: 1px solid #ddd;
+}
+
+.vendor-info h1 {
+  font-size: 22px;
+  margin-bottom: 8px;
+  color: #1e7f4b;
+}
+
+.vendor-info .tags,
+.vendor-info .timing,
+.vendor-info .contact,
+.vendor-info .distance {
+  font-size: 14px;
+  color: #555;
+  margin-bottom: 6px;
+}
+
+/* Menu Section */
+.menu-section {
+  padding: 16px;
+  background: #fff;
+  margin-top: 12px;
+}
+
+.menu-section h2 {
+  font-size: 18px;
+  margin-bottom: 12px;
+  color: #1e7f4b;
+}
+
+.menu-list {
+  list-style: none;
+}
+
+.menu-list li {
+  display: flex;
+  justify-content: space-between;
+  padding: 8px 0;
+  border-bottom: 1px dashed #ccc;
+  font-size: 15px;
+}
+
+/* Review Section */
+.review-section {
+  padding: 16px;
+  background: #fff;
+  margin-top: 12px;
+}
+
+.review-section h2 {
+  font-size: 18px;
+  margin-bottom: 12px;
+  color: #1e7f4b;
+}
+
+.review {
+  background: #f0f0f0;
+  padding: 10px 14px;
+  border-radius: 6px;
+  margin-bottom: 10px;
+  font-size: 14px;
+}
+
+
+.review p:first-child {
+  font-weight: bold;
+  color: #222;
+}
+
+.review p:last-child {
+  margin-top: 4px;
+  color: #444;
+}
+
+
+/* Action Buttons */
+.action-buttons {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: white;
+  display: flex;
+  justify-content: space-around;
+  padding: 12px 0;
+  border-top: 1px solid #ccc;
+}
+
+.btn {
+  padding: 10px 20px;
+  border-radius: 30px;
+  font-size: 15px;
+  font-weight: bold;
+  text-decoration: none;
+  color: white;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.nav-btn {
+  background-color: #1e7f4b;
+}
+
+.review-btn {
+  background-color: #f4b400;
+}
+
+
+/* ********************For Review *********************** */
+/* Modal Overlay */
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal-box {
+  background: #fff;
+  padding: 20px;
+  width: 90%;
+  max-width: 320px;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.modal-box h2 {
+  font-size: 18px;
+  margin-bottom: 12px;
+  color: #1e7f4b;
+}
+
+.modal-box label {
+  display: block;
+  text-align: left;
+  margin-top: 12px;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.modal-box select,
+.modal-box textarea {
+  width: 100%;
+  padding: 8px;
+  margin-top: 4px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+.modal-buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 16px;
+}
+
+.modal-buttons button {
+  padding: 8px 16px;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.modal-buttons button:first-child {
+  background: #1e7f4b;
+  color: white;
+}
+
+.modal-buttons button:last-child {
+  background: #ccc;
+}
+
+.hidden {
+  display: none;
+}
+
+
+.hygiene-badge {
+  width: 20px;
+  height: 20px;
+  margin-left: 6px;
+  vertical-align: middle;
+}
+
+.food-icon {
+  width: 16px;
+  height: 16px;
+  vertical-align: middle;
+  margin-right: 5px;
+}

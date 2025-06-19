@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Vendor Details | Nukkad Ninja</title>
+  <link rel="stylesheet" href="assets/css/vendor-detail.css" />
+  <!-- Firebase SDKs -->
+<script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-firestore.js"></script>
+
+<!-- Firebase Config -->
+<script>
+const firebaseConfig = {
+  apiKey: "AIzaSyCF3ruScakSs-qpf4NxSiqBQlZtLS6IATA",
+  authDomain: "nukkad-ninja.firebaseapp.com",
+  projectId: "nukkad-ninja",
+  storageBucket: "nukkad-ninja.firebasestorage.app",
+  messagingSenderId: "978499163699",
+  appId: "1:978499163699:web:af3c3549d161076bc3b546",
+  measurementId: "G-ZZBQFCNDCX"
+};
+  const app = firebase.initializeApp(firebaseConfig);
+  const db = firebase.firestore(app);
+</script>
+
+</head>
+
+
+<!-- Review Modal -->
+<div class="modal-overlay hidden" id="review-modal">
+  <div class="modal-box">
+    <h2>Add Your Review</h2>
+    <label for="rating">Rating:</label>
+    <select id="rating">
+      <option value="5">⭐ 5</option>
+      <option value="4">⭐ 4</option>
+      <option value="3">⭐ 3</option>
+      <option value="2">⭐ 2</option>
+      <option value="1">⭐ 1</option>
+    </select>
+
+    <label for="comment">Comment:</label>
+    <textarea id="comment" rows="4" placeholder="Write your experience..."></textarea>
+
+    <div class="modal-buttons">
+      <button onclick="submitReview()">Submit</button>
+      <button onclick="closeReviewModal()">Cancel</button>
+    </div>
+  </div>
+</div>
+
+
+
+<body>
+
+  <!-- Vendor Banner -->
+  <div class="vendor-banner">
+    <img src="assets/img/sample-vendor.jpg" alt="Vendor Photo" />
+  </div>
+
+  <!-- Vendor Info -->
+<div class="vendor-info">
+  <h1>
+    Chotu Bhai Chaat
+    <img src="assets/img/hygiene-badge.png" alt="Hygiene Badge" class="hygiene-badge" />
+  </h1>
+  <p class="tags">
+    <img src="assets/img/veg-icon.png" alt="Veg" class="food-icon" />
+    ⭐ 4.5 • Best under ₹100 • Hygienic Certified
+  </p>
+  <p class="distance">📍 350m away</p>
+  <p class="timing">🕒 Open: 10 AM – 9 PM</p>
+  <p class="contact">📞 +91 98765 43210</p>
+</div>
+
+
+  <!-- Menu -->
+  <div class="menu-section">
+    <h2>Menu</h2>
+    <ul class="menu-list">
+      <li><span>Papdi Chaat</span><span>₹40</span></li>
+      <li><span>Aloo Tikki</span><span>₹35</span></li>
+      <li><span>Dahi Puri</span><span>₹45</span></li>
+      <li><span>Gol Gappe</span><span>₹25</span></li>
+    </ul>
+  </div>
+
+<!-- Reviews -->
+<div class="review-section">
+  <h2>Reviews</h2>
+
+  <div class="review">
+    <p><strong>👤 Aazam Khan – ⭐ 5</strong></p>
+    <p>Great taste and hygiene!</p>
+  </div>
+
+  <div class="review">
+    <p><strong>👤 Neha Sharma – ⭐ 4</strong></p>
+    <p>Affordable and clean setup.</p>
+  </div>
+
+  <!-- Action Buttons -->
+  <div class="action-buttons">
+    <!-- Replace lat,long with real vendor coordinates -->
+    <a href="https://www.google.com/maps/dir/?api=1&destination=26.9100,80.9448"
+       class="btn nav-btn" target="_blank">
+      📍 Get Location
+    </a>
+    <button class="btn review-btn" onclick="handleReview()">⭐ Add Review</button>
+  </div>
+
+  <script src="assets/js/vendor-detail.js"></script>
+</body>
+</html>

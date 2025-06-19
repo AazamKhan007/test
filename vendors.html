@@ -1,0 +1,77 @@
+<!-- vendors.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nearby Vendors | Nukkad Ninja</title>
+  <link rel="stylesheet" href="assets/css/vendors.css" />
+  <!-- Firebase SDKs -->
+<script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-firestore.js"></script>
+
+<!-- Your config -->
+<script>
+const firebaseConfig = {
+  apiKey: "AIzaSyCF3ruScakSs-qpf4NxSiqBQlZtLS6IATA",
+  authDomain: "nukkad-ninja.firebaseapp.com",
+  projectId: "nukkad-ninja",
+  storageBucket: "nukkad-ninja.firebasestorage.app",
+  messagingSenderId: "978499163699",
+  appId: "1:978499163699:web:af3c3549d161076bc3b546",
+  measurementId: "G-ZZBQFCNDCX"
+};
+  const app = firebase.initializeApp(firebaseConfig);
+  const db = firebase.firestore(app);
+</script>
+
+</head>
+<body>
+  <!-- Location Popup -->
+  <div class="popup-overlay hidden" id="location-popup">
+    <div class="popup-box">
+      <p>📍 Allow location access to discover nearby hidden food gems!</p>
+      <button id="enable-location-btn">Enable Location</button>
+    </div>
+  </div>
+
+  <!-- App Header -->
+  <header class="vendor-header">
+    <img src="https://via.placeholder.com/100x40?text=Nukkad+Ninja" alt="Nukkad Ninja Logo" class="logo"/>
+    <a href="login.html">
+    <img src="assets/img/user-avatar.png" alt="User Avatar" class="user-avatar" />
+    </a>
+  </header>
+
+  <!-- Search Bar -->
+  <div class="search-bar">
+    <input type="text" placeholder="Search vendors..." />
+  </div>
+
+  <!-- Vendor List Container -->
+<main class="vendor-list blurred" id="vendor-list">
+  <!-- Vendor Card 1 -->
+<a href="vendor-detail.html" class="vendor-card-link">
+  <div class="vendor-card">
+    <img src="assets/img/sample-vendor.jpg" alt="Vendor Image" />
+    <div class="vendor-info">
+      <h3>
+        Chotu Bhai Chaat
+        <img src="assets/img/hygiene-badge.png" alt="Hygiene Badge" class="hygiene-badge" />
+      </h3>
+      <p>
+        <img src="assets/img/veg-icon.png alt="Veg" class="food-icon" />
+        ⭐ 4.5 • Best under ₹100
+      </p>
+      <p>10 AM – 9 PM • Hygienic Certified</p>
+      <p>📍 350m away</p>
+    </div>
+  </div>
+</a>
+</main>
+
+
+
+  <script src="assets/js/vendors.js"></script>
+</body>
+</html>
